@@ -23,9 +23,7 @@ var sectionName = {
 var sectionOrder = ['physical', 'emotion', 'intellect', 'summary'];
 
 module.exports = function(robot) {
-  robot.respond(/biorythm(\s*([0-9]*))/i, function(msg) {
-    var biorythmNum = null;
-
+  robot.respond(/biorythm(\s*([0-9\s]*))/i, function(msg) {
     if (!msg.match[2]) {
       msg.send('biorythm birthday (YYYYMMDD) | biorythm birthday targetdate');
       return;
@@ -48,7 +46,7 @@ module.exports = function(robot) {
     }
 
     var message = sectionOrder.reduce(function(msg, section) {
-      msg = msg + sectionName[title] + ': ' + messages[section] + '\n';
+      msg = msg + sectionName[section] + ': ' + messages[section] + '\n';
       return msg;
     }, '');
 

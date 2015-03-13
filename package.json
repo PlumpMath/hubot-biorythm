@@ -1,0 +1,36 @@
+{
+  "name": "hubot-biorythm",
+  "version": "0.1.0",
+  "description": "Hubot Biorythm Script",
+  "main": "hubot-biorythm.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "hubot-scripts": "*"
+  },
+  "devDependencies": {
+    "nodeunit": "*",
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-nodeunit": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/golbin/hubot-biorythm.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "biorythm"
+  ],
+  "author": "golbin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/golbin/hubot-biorythm/issues"
+  },
+  "homepage": "https://github.com/golbin/hubot-biorythm",
+  "directories": {
+    "test": "test"
+  }
+}

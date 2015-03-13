@@ -62,8 +62,8 @@ var calcBioStep = function(quotientType, value) {
 var getBioValues = function(birthday, date) {
   var quotientValues = {},
       quotientValuesYesterday = {},
-      dayDiffs = diffDays(birthday);
-      dayDiffsYesterday = diffDays(birthday - 1);
+      dayDiffs = diffDays(birthday, date);
+      dayDiffsYesterday = diffDays(birthday - 1, date);
 
   if (!dayDiffs) {
     return null;

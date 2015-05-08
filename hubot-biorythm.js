@@ -3,8 +3,8 @@
  *   Hubot Biorythm
  *
  * Commands:
- *   hubot biorythm birthday (YYYYMMDD)
- *   hubot biorythm birthday targetdate
+ *   hubot bio birthday (YYYYMMDD)
+ *   hubot bio birthday targetdate
  *
  * Author:
  *   @golbin
@@ -23,9 +23,9 @@ var sectionName = {
 var sectionOrder = ['physical', 'emotion', 'intellect', 'summary'];
 
 module.exports = function(robot) {
-  robot.respond(/biorythm(\s*([0-9\s]*))/i, function(msg) {
+  robot.respond(/bio(\s*([0-9\s]*))/i, function(msg) {
     if (!msg.match[2]) {
-      msg.send('biorythm birthday (YYYYMMDD) | biorythm birthday targetdate');
+      msg.send('bio birthday (YYYYMMDD) | bio birthday targetdate');
       return;
     }
 
@@ -34,7 +34,7 @@ module.exports = function(robot) {
 
     if (date.length < 1 ||
         date[0].length !== 8) {
-      msg.send('biorythm birthday (YYYYMMDD) | biorythm birthday targetdate');
+      msg.send('bio birthday (YYYYMMDD) | bio birthday targetdate');
       return;
     }
 
